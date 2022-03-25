@@ -5,7 +5,7 @@
         let rep = await fetch(`/api/screenshot/${encodeURIComponent(url)}?pause=${temps}&isDev=0`)
         let s = await rep.json()
         result = s.fileData
-        console.log(s.statut)
+        console.log(s.erreur)
     }
 
 </script>

@@ -22,7 +22,7 @@ async function getOptions(isDev) {
 }
 
 export async function get({url, params, res}) {
-    let statut, file, fileData
+    let statut, file, fileData, erreur
 
     const uri = new URLSearchParams(url.search)
     const isDev = uri.get("isDev") === "1"
@@ -59,12 +59,13 @@ export async function get({url, params, res}) {
 
     } catch (e) {
         statut = 500;
+        erreur = e
     }
 
     //const test1 = new Buffer(params.page);
     //const test = test1.toString('base64')
     return{
-        body: { fileData, statut },
+        body: { fileData, statut, erreur },
 
     }
 }
