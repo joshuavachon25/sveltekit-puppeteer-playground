@@ -11,11 +11,17 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-load-config": "^3.1.1",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1",
+    "tailwindcss": "^3.0.12"
   },
   "type": "module",
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
+    "daisyui": "^2.13.2",
     "puppeteer-core": "10.1.0"
   }
 }
