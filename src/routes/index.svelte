@@ -2,7 +2,7 @@
     let url, temps = 0
     let result
     async function getParams(){
-        let rep = await fetch(`/api/screenshot/${encodeURIComponent(url)}?isDev=1&pause=${temps}`)
+        let rep = await fetch(`/api/screenshot/${encodeURIComponent(url)}?pause=${temps}`)
         let s = await rep.json()
         result = s.fileData
         console.log(s.statut)
