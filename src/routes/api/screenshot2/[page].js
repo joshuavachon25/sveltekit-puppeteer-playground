@@ -14,7 +14,7 @@ export async function get({url, params, res}) {
         if (!pageToScreenshot.includes("https://")) {
             statut = 404;
         }
-        browser = await playwright.launchChromium();
+        browser = await playwright.launchChromium({ headless: true });
         const context = await browser.newContext();
 
         const page = await context.newPage();
