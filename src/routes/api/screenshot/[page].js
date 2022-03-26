@@ -35,9 +35,12 @@ export async function get({url, params, res}) {
         }
 
         const options = await getOptions(isDev);
-
+        console.log("IsDev:", isDev)
+        console.log("Options:", options)
         const browser = await puppeteer.launch(options);
+        console.log("Browser:", browser)
         const page = await browser.newPage();
+        console.log("Page:", page)
 
         await page.setViewport({
             width: 1920,
@@ -52,6 +55,8 @@ export async function get({url, params, res}) {
             type: "png",
         });
 
+        console.log("Fichier:", file)
+
         fileData = "data:image/png;base64," + file.toString('base64')
         await browser.close();
 
@@ -65,7 +70,8 @@ export async function get({url, params, res}) {
     //const test1 = new Buffer(params.page);
     //const test = test1.toString('base64')
     return{
-        body: { fileData, statut, erreur },
 
+        body: { fileData, erreur },
+        status: statut
     }
 }
