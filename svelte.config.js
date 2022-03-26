@@ -5,9 +5,7 @@ import adapter from "@sveltejs/adapter-auto";
 const config = {
   kit: {
     adapter: adapter(),
-
   },
-  external: ["electron/index.js"],
   preprocess: [
     preprocess({
       postcss: true,
