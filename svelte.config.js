@@ -4,7 +4,8 @@ import adapter from "@sveltejs/adapter-auto";
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter(external("electron/index.js")),
+    adapter: adapter(),
+    external :"electron/index.js"
   },
 
   preprocess: [
