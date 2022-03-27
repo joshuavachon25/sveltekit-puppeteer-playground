@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-puppeteer-playground",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "1.0.0-next.180",
+    "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.5",
     "postcss-load-config": "^3.1.1",
